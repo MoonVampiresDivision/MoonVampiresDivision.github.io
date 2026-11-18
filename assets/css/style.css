@@ -488,6 +488,14 @@ p:last-child { margin-bottom: 0; }
 .form { display: grid; gap: 1.75rem; }
 .form-note { margin: 0; font-size: 0.9rem; color: var(--muted); }
 .req { color: var(--accent-strong); }
+.optional-tag {
+  display: inline-block;
+  margin-left: 0.35rem;
+  font-size: 0.8rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--muted);
+}
 
 .field { display: grid; gap: 0.5rem; }
 .field fieldset { border: 0; margin: 0; padding: 0; min-width: 0; display: grid; gap: 0.5rem; }

@@ -40,11 +40,12 @@ scripts:
       <p class="form-note"><span class="req" aria-hidden="true">*</span> Pflichtfeld</p>
 
       {% for f in site.data.bewerbungsformular %}
+      {% unless f.id %}{% continue %}{% endunless %}
       {% capture fid %}frage-{{ f.id }}{% endcapture %}
       <div class="field" data-field>
         {% if f.typ == 'auswahl' %}
         <fieldset{% if f.hinweis %} aria-describedby="{{ fid }}-hinweis"{% endif %}>
-          <legend class="field-label">{{ f.frage }}{% if f.pflicht %} <span class="req" aria-hidden="true">*</span>{% endif %}</legend>
+          <legend class="field-label">{{ f.frage }}{% if f.pflicht %} <span class="req" aria-hidden="true">*</span>{% else %} <span class="optional-tag">freiwillige Angabe</span>{% endif %}</legend>
           {% if f.hinweis %}<p class="field-hint" id="{{ fid }}-hinweis">{{ f.hinweis }}</p>{% endif %}
           <div class="choices">
             {% for o in f.optionen %}
@@ -63,7 +64,7 @@ scripts:
           </div>
         </fieldset>
         {% else %}
-        <label class="field-label" for="{{ fid }}">{{ f.frage }}{% if f.pflicht %} <span class="req" aria-hidden="true">*</span>{% endif %}</label>
+        <label class="field-label" for="{{ fid }}">{{ f.frage }}{% if f.pflicht %} <span class="req" aria-hidden="true">*</span>{% else %} <span class="optional-tag">freiwillige Angabe</span>{% endif %}</label>
         {% if f.hinweis %}<p class="field-hint" id="{{ fid }}-hinweis">{{ f.hinweis }}</p>{% endif %}
         {% if f.typ == 'absatz' %}
         <textarea id="{{ fid }}" name="entry.{{ f.id }}" rows="6" maxlength="4000"{% if f.pflicht %} required{% endif %}{% if f.hinweis %} aria-describedby="{{ fid }}-hinweis"{% endif %}{% if f.zeichenzaehler %} data-counter{% endif %}></textarea>

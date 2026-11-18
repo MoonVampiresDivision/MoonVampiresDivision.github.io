@@ -8,6 +8,8 @@
 # typ:       text | zahl | absatz | auswahl
 # pflicht:   true = muss ausgefüllt werden
 # sonstiges: true = zusätzliche Option "Sonstiges" mit eigenem Textfeld
+# Ohne "id" wird eine Frage auf der Website nicht angezeigt (praktisch für neue Fragen,
+# die im Google-Formular noch fehlen).
 
 - id: 698113676
   typ: text
@@ -31,6 +33,12 @@
   frage: Wie alt bist du?
   hinweis: Trau dich auch, wenn du das Mindestalter nicht erreicht hast. Wir machen Ausnahmen, wenn wir merken, dass du zu uns passt!
   pflicht: true
+
+- id: 1342871410
+  typ: absatz
+  frage: Erzähl uns etwas über dich
+  hinweis: Zum Beispiel Hobbys, Freizeitaktivitäten, Beruf oder was du als wichtig empfindest.
+  pflicht: false
 
 - id: 747091318
   typ: auswahl
