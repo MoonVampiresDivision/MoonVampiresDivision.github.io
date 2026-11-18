@@ -17,8 +17,8 @@ bewerbung_ziel: https://docs.google.com/forms/d/e/1FAIpQLSe1VFn8sNr0fqXc9M6VGDhz
 bewerbung_google: https://docs.google.com/forms/d/e/1FAIpQLSe1VFn8sNr0fqXc9M6VGDhzibzYSbAlL79_PRi8R5dRPi4vCg/viewform
 
 # Google Search Console: bestätigt über die Datei googlea0a8de82222a718d.html im Hauptordner
-# (bitte nicht löschen). Optional ginge auch ein HTML-Tag-Code hier (nur der Wert):
-google_site_verification: ""
+# (bitte nicht löschen). Optional ginge auch ein HTML-Tag-Code: Zeile unten aktivieren (nur der Wert):
+# google_site_verification: CODE
 
 # Erstellt automatisch /sitemap.xml (Liste aller Seiten für Suchmaschinen)
 plugins:
