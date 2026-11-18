@@ -16,5 +16,9 @@ baseurl: ""
 bewerbung_ziel: https://docs.google.com/forms/d/e/1FAIpQLSe1VFn8sNr0fqXc9M6VGDhzibzYSbAlL79_PRi8R5dRPi4vCg/formResponse
 bewerbung_google: https://docs.google.com/forms/d/e/1FAIpQLSe1VFn8sNr0fqXc9M6VGDhzibzYSbAlL79_PRi8R5dRPi4vCg/viewform
 
+# Erstellt automatisch /sitemap.xml (Liste aller Seiten für Suchmaschinen)
+plugins:
+  - jekyll-sitemap
+
 exclude:
   - README.md
