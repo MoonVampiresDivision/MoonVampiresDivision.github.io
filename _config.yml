@@ -7,7 +7,7 @@ lang: de
 # Adresse der Seite.
 # Heißt das Repository <benutzername>.github.io, bleibt baseurl leer.
 # Heißt es anders (z. B. "moonvampires"), hier "/moonvampires" eintragen.
-url: ""
+url: "https://moonvampiresdivision.github.io"
 baseurl: ""
 
 # Links
