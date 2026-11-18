@@ -1,0 +1,19 @@
+# Hauptmenü – Reihenfolge hier = Reihenfolge auf der Seite
+- id: home
+  titel: Home
+  url: /
+- id: ueber-uns
+  titel: Über uns
+  url: /ueber-uns.html
+- id: uniform
+  titel: Uniform
+  url: /uniform.html
+- id: clubtreffen
+  titel: Clubtreffen
+  url: /clubtreffen.html
+- id: rangsystem
+  titel: Rangsystem
+  url: /rangsystem.html
+- id: bewirb-dich
+  titel: Bewirb dich
+  url: /bewirb-dich.html

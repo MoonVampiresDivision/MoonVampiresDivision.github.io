@@ -1,0 +1,27 @@
+# Wochenplan auf der Seite "Clubtreffen".
+# Einfach einen Block kopieren, um einen Termin hinzuzufügen.
+# freiwillig: true  -> Karte bekommt einen gestrichelten Rahmen und das Schild "Freiwillig"
+- tag: Dienstag
+  zeit: 21 – 22 Uhr
+  text:
+    - Mit Cluboutfit und Clubpferd an unserem Stammplatz.
+    - Was gemacht wird, wird vorher in der Roadmap bekanntgegeben.
+
+- tag: Donnerstag
+  zeit: 21 – 22 Uhr
+  text:
+    - Mit Cluboutfit und Clubpferd an unserem Stammplatz.
+    - Was gemacht wird, wird vorher in der Roadmap bekanntgegeben.
+
+- tag: Sonntag
+  zeit: 21 – 22 Uhr
+  text:
+    - Mit Cluboutfit und Clubpferd an unserem Stammplatz.
+    - Was gemacht wird, wird vorher in der Roadmap bekanntgegeben.
+
+- tag: Zockerrunden
+  zeit: spontan
+  freiwillig: true
+  text:
+    - Im Discord wird regelmäßig nachgefragt, ob jemand Lust auf ein Spiel hat.
+    - Auch du selbst kannst nachfragen, ob jemand Lust hat.

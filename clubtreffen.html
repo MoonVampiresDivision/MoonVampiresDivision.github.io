@@ -1,0 +1,46 @@
+---
+layout: default
+title: Clubtreffen
+nav: clubtreffen
+description: Stammplatz, Wochenplan und Roadmap der Moon Vampires Division.
+---
+<section class="section">
+  <div class="container split">
+    <div class="reveal">
+      <span class="eyebrow">Clubtreffen</span>
+      <h1>Stammplatz</h1>
+      <p class="lead">Ihr findet uns bei der Koppel seiner Hoheit, an der rechten langen Seite, beim Marchenghast-Stall.</p>
+    </div>
+    <figure class="figure photo reveal">
+      <img src="{{ '/assets/img/stammplatz.webp' | relative_url }}" alt="Unser Stammplatz an der Koppel seiner Hoheit" width="1200" height="675" loading="lazy">
+    </figure>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <header class="section-head reveal">
+      <h2>Wochenplan</h2>
+    </header>
+    <div class="grid grid-4">
+      {% for termin in site.data.wochenplan %}
+      <article class="card day reveal{% if termin.freiwillig %} is-optional{% endif %}">
+        {% if termin.freiwillig %}<span class="badge">Freiwillig</span>{% endif %}
+        <h3>{{ termin.tag }}</h3>
+        <p class="day-time">{{ termin.zeit }}</p>
+        {% for zeile in termin.text %}<p>{{ zeile }}</p>{% endfor %}
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <article class="card reveal" style="max-width: 760px; margin-inline: auto; text-align: center;">
+      <h2>Roadmap</h2>
+      <p>Zu Beginn jedes Monats gibt es eine Roadmap, die genau festlegt, an welchen Tagen welche Aktivitäten stattfinden werden.</p>
+      <p>Geplant sind zwei Pflicht-Clubtreffen und ein freiwilliges. Die Pflichttreffen sind Dressurtreffen oder regelmäßige Eventtreffen.</p>
+    </article>
+  </div>
+</section>

@@ -1,0 +1,39 @@
+---
+layout: default
+title: Rangsystem
+nav: rangsystem
+description: Kein klassisches Rangsystem – jeder hat bei der Moon Vampires Division SEINE Aufgabe.
+---
+<section class="section">
+  <div class="container split">
+    <div class="reveal">
+      <span class="eyebrow">Rangsystem</span>
+      <h1>Jeder hat SEINE Aufgabe</h1>
+      <p class="lead">Wir haben uns dazu entschieden, kein klassisches Rangsystem einzuführen. Wir möchten alle gleich behandeln und damit den Zusammenhalt stärken.</p>
+      <p>Aber natürlich ist es bei uns auch möglich aufzusteigen. Diese Rollen kommen dann aber mit mehr Aufgaben und mehr Verantwortung, die wir euch anvertrauen.</p>
+      <p>Wir möchten, dass keiner zu viele Aufgaben übernehmen muss. Deshalb darf bei uns nur einem Team oder Rang beigetreten werden. Das bedeutet: Jeder hat SEINE Aufgabe im Club.</p>
+    </div>
+    <figure class="figure figure-portrait reveal">
+      <img src="{{ '/assets/img/rangsystem.webp' | relative_url }}" alt="Clubmitglied in Uniform, die Hände in die Hüften gestemmt" width="600" height="596" loading="lazy">
+    </figure>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <ol class="ranks">
+      {% for rang in site.data.raenge %}
+      <li class="rank reveal" data-step="{{ forloop.index }}">
+        <article class="card">
+          <div class="rank-head">
+            <h2>{{ rang.name }}</h2>
+            <span class="rank-role">({{ rang.rolle }})</span>
+          </div>
+          <p class="rank-intro">{{ rang.intro }}</p>
+          <p>{{ rang.text }}</p>
+        </article>
+      </li>
+      {% endfor %}
+    </ol>
+  </div>
+</section>

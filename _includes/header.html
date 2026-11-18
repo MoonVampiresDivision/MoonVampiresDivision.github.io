@@ -1,0 +1,19 @@
+<a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
+<header class="site-header{% if page.nav != 'home' %} is-compact{% endif %}">
+  <p class="tagline">{{ site.tagline }}</p>
+  <a class="brand" href="{{ '/' | relative_url }}" aria-label="{{ site.title }} – Startseite">
+    <img class="brand-logo" src="{{ '/assets/img/logo.webp' | relative_url }}" alt="" width="640" height="640">
+    <span class="brand-name">Moon Vampires<br>Division</span>
+  </a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="hauptmenue">
+    <span class="nav-toggle-bars" aria-hidden="true"></span>
+    Menü
+  </button>
+  <nav id="hauptmenue" class="site-nav" aria-label="Hauptmenü">
+    <ul>
+      {% for item in site.data.navigation %}
+      <li><a href="{{ item.url | relative_url }}"{% if page.nav == item.id %} aria-current="page"{% endif %}>{{ item.titel }}</a></li>
+      {% endfor %}
+    </ul>
+  </nav>
+</header>

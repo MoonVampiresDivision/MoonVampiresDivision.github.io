@@ -1,0 +1,25 @@
+# Ränge auf der Seite "Rangsystem" – von oben (höchster Rang) nach unten.
+- name: Leitung
+  rolle: Clubbesitzer und Clubleitung
+  intro: Unsere Leitung, die alles leitet und lenkt.
+  text: Übernimm die Verantwortung für deine Aufgaben und bring deine eigenen Ideen ein. Forme den Club mit.
+
+- name: Älteste
+  rolle: Reitlehrer
+  intro: Unser Reitlehrerteam, das sich um alles kümmert, was mit Dressur zu tun hat.
+  text: Entwickle zusammen im Team unser Dressurkonzept und plane unsere Dressur-Clubtreffen. Außerdem bist du dafür zuständig, die Prüfungen für die Fürsten und Grafen zu entwickeln und abzuhalten. Teile Videoprojekte und Competitions zu und hilf, diese umzusetzen.
+
+- name: Fürst und Graf
+  rolle: Meister und Schüler
+  intro: Unsere erste und zweite Elitetruppe. Nur die Besten, mit sehr guten Dressurkenntnissen, kommen in diese Teams.
+  text: Du darfst Videos und Competitions mit eigenen Ideen und Moves versehen.
+
+- name: Horde
+  rolle: Mitglieder
+  intro: Du hast die Probezeit bestanden? Dann bist du offiziell ein Mitglied!
+  text: Entscheide, was du bei uns erreichen willst, und tritt dem richtigen Team bei oder arbeite auf eine Prüfung hin, um ein Fürst oder Graf zu werden.
+
+- name: Anwärter
+  rolle: Anfänger
+  intro: Unsere Neulinge, die in die Horde aufgenommen werden wollen.
+  text: Sei aktiv und engagiert, um nach 4 Wochen ein vollwertiges Mitglied zu werden.

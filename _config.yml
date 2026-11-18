@@ -1,0 +1,19 @@
+# Grundeinstellungen der Website
+title: Moon Vampires Division
+tagline: "⏾ Im Mondlicht sind wir euer Schicksal 🦇"
+description: "Moon Vampires Division – ein Dressurclub, der mit dir wachsen will. Alles über uns, unsere Uniform, Clubtreffen, das Rangsystem und deine Bewerbung."
+lang: de
+
+# Adresse der Seite.
+# Heißt das Repository <benutzername>.github.io, bleibt baseurl leer.
+# Heißt es anders (z. B. "moonvampires"), hier "/moonvampires" eintragen.
+url: ""
+baseurl: ""
+
+# Links
+instagram: https://www.instagram.com/moon.vampires.division/
+instagram_name: "@moon.vampires.division"
+bewerbung: https://docs.google.com/forms/d/e/1FAIpQLSe1VFn8sNr0fqXc9M6VGDhzibzYSbAlL79_PRi8R5dRPi4vCg/viewform
+
+exclude:
+  - README.md
