@@ -41,8 +41,40 @@ Das funktioniert auch, wenn jemand das Google-Formular direkt benutzt. Es ist ko
 
 Fertig. Ab jetzt postet jede neue Bewerbung automatisch in den Channel.
 
+## Extras (optional)
+
+### 🗳 Abstimmung der Leitung
+
+Unter jeder Bewerbung erscheint automatisch eine Discord-Umfrage:
+✅ Annehmen · ❌ Ablehnen · 🤔 Unsicher – erst besprechen.
+
+- Die Abstimmung läuft standardmäßig **72 Stunden**. Ändern lässt sich das über die Skripteigenschaft
+  `DISCORD_ABSTIMMUNG_STUNDEN` (z. B. `48`). Mit `0` ist die Abstimmung aus.
+- Abstimmen kann jeder, der den Channel sehen kann. Der Bewerbungs-Channel sollte deshalb nur für die Leitung sichtbar sein.
+- Erscheint keine Umfrage, fehlt im Channel vermutlich das Recht **„Umfragen erstellen“** für @everyone.
+  Das Recht lässt sich nur für diesen (privaten) Channel erlauben. Die Bewerbung selbst wird trotzdem gepostet.
+
+### 💬 Eigener Beitrag (Thread) pro Bewerbung
+
+Dafür muss der Bewerbungs-Channel ein **Forum-Channel** sein. Jede Bewerbung bekommt dann einen eigenen Beitrag
+mit dem Namen der Person. Bewerbung, Abstimmung und Diskussion stehen darin gesammelt.
+
+1. In Discord einen neuen Channel anlegen → Typ **Forum** → z. B. `bewerbungen`, nur für die Leitung sichtbar.
+   (Einen normalen Text-Channel kann man nicht in ein Forum umwandeln.)
+2. Im Forum unter **Kanal bearbeiten → Integrationen → Webhooks** einen neuen Webhook anlegen und die URL kopieren.
+3. In Apps Script die Skripteigenschaften anpassen:
+   - `DISCORD_WEBHOOK_URL` → die **neue** Webhook-URL des Forums
+   - `DISCORD_FORUM` → `ja`
+4. `testNachricht` ausführen. Im Forum erscheint ein Beitrag „🧪 TEST – Testi (Testine Mondschein)“.
+
+Tipp: Unter **Kanal bearbeiten → Tags** könnt ihr Tags wie „Offen“, „Angenommen“ und „Abgelehnt“ anlegen.
+Nach der Entscheidung setzt die Leitung den passenden Tag. So sieht man den Stand aller Bewerbungen auf einen Blick
+und kann danach filtern.
+
 ## Gut zu wissen
 
 - Lange Antworten kürzt Discord auf 1024 Zeichen pro Frage (mit „…“). Die vollständige Bewerbung steht immer im Google-Formular.
 - Klappt einmal etwas nicht, steht der Fehler in Apps Script unter **Ausführungen**.
 - Wird der Webhook gelöscht oder neu erstellt, nur die Skripteigenschaft `DISCORD_WEBHOOK_URL` anpassen.
+- Nach einer Änderung am Skript reicht es, den Code in Apps Script zu ersetzen und zu speichern.
+  Skripteigenschaften und Trigger bleiben erhalten.
