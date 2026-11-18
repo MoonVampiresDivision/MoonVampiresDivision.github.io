@@ -49,7 +49,8 @@ function senden_(eintraege, zeitpunkt, istTest) {
   var felder = eintraege
     .filter(function (e) { return e.antwort; })
     .map(function (e) {
-      return { name: kuerzen_(e.frage, 256), value: kuerzen_(e.antwort, MAX_FELD), inline: e.antwort.length <= 40 };
+      // inline: false -> jede Frage steht in einer eigenen Zeile (gut lesbar auf PC und Handy)
+      return { name: kuerzen_(e.frage, 256), value: kuerzen_(e.antwort, MAX_FELD), inline: false };
     });
 
   // Felder auf mehrere Nachrichten verteilen, falls die Bewerbung sehr lang ist
