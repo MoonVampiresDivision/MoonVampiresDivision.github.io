@@ -1,0 +1,106 @@
+---
+layout: default
+title: Bewerbungsbogen
+nav: bewirb-dich
+description: Bewirb dich direkt hier bei der Moon Vampires Division.
+scripts:
+  - /assets/js/bewerbung.js
+---
+<section class="section">
+  <div class="container form-layout">
+    <header class="section-head reveal">
+      <span class="eyebrow">Bewerbungsbogen</span>
+      <h1>Jetzt ist es so weit!</h1>
+      <p>Beantworte die Fragen genau und wahrheitsgemäß und zeig uns, dass du zu uns gehören willst! Nimm dir Zeit – wir freuen uns auf dich.</p>
+    </header>
+
+    <details class="card info-box reveal">
+      <summary>Gut zu wissen, bevor du loslegst</summary>
+      <div class="info-grid">
+        <div>
+          <h2 class="h-small">Anforderungen</h2>
+          <ul class="tilde-list">
+            <li>Mindestalter: 16 Jahre <span class="muted">(Ausnahmen machen wir, wenn wir denken, dass du zu uns passt)</span></li>
+            <li>Mindestlevel: 20</li>
+            <li>Vorhandene bzw. in Zukunft vorhandene <a href="{{ '/uniform.html' | relative_url }}">Uniform</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="h-small">Clubtreffen</h2>
+          <p>Dienstag, Donnerstag und Sonntag, jeweils 21 – 22 Uhr. Davon sind zwei Pflicht und eins freiwillig. Wie sie über die Woche verteilt sind, erfährst du auf Discord in der Roadmap.</p>
+        </div>
+        <div>
+          <h2 class="h-small">Probezeit</h2>
+          <p>Die Probezeit dauert 4 Wochen. Verlängerungen sind möglich, werden dann aber per Abstimmung durch die Mitglieder entschieden.</p>
+        </div>
+      </div>
+    </details>
+
+    <form id="bewerbungsformular" class="card form reveal" action="{{ site.bewerbung_ziel }}" method="post" target="_blank" novalidate>
+      <p class="form-note"><span class="req" aria-hidden="true">*</span> Pflichtfeld</p>
+
+      {% for f in site.data.bewerbungsformular %}
+      {% capture fid %}frage-{{ f.id }}{% endcapture %}
+      <div class="field" data-field>
+        {% if f.typ == 'auswahl' %}
+        <fieldset{% if f.hinweis %} aria-describedby="{{ fid }}-hinweis"{% endif %}>
+          <legend class="field-label">{{ f.frage }}{% if f.pflicht %} <span class="req" aria-hidden="true">*</span>{% endif %}</legend>
+          {% if f.hinweis %}<p class="field-hint" id="{{ fid }}-hinweis">{{ f.hinweis }}</p>{% endif %}
+          <div class="choices">
+            {% for o in f.optionen %}
+            <label class="choice">
+              <input type="radio" name="entry.{{ f.id }}" value="{{ o | escape }}"{% if f.pflicht %} required{% endif %}>
+              <span>{{ o }}</span>
+            </label>
+            {% endfor %}
+            {% if f.sonstiges %}
+            <label class="choice choice-other">
+              <input type="radio" name="entry.{{ f.id }}" value="__other_option__" data-other{% if f.pflicht %} required{% endif %}>
+              <span>Sonstiges:</span>
+              <input type="text" class="other-input" name="entry.{{ f.id }}.other_option_response" aria-label="Sonstiges – bitte angeben" data-other-text maxlength="300">
+            </label>
+            {% endif %}
+          </div>
+        </fieldset>
+        {% else %}
+        <label class="field-label" for="{{ fid }}">{{ f.frage }}{% if f.pflicht %} <span class="req" aria-hidden="true">*</span>{% endif %}</label>
+        {% if f.hinweis %}<p class="field-hint" id="{{ fid }}-hinweis">{{ f.hinweis }}</p>{% endif %}
+        {% if f.typ == 'absatz' %}
+        <textarea id="{{ fid }}" name="entry.{{ f.id }}" rows="6" maxlength="4000"{% if f.pflicht %} required{% endif %}{% if f.hinweis %} aria-describedby="{{ fid }}-hinweis"{% endif %}{% if f.zeichenzaehler %} data-counter{% endif %}></textarea>
+        {% if f.zeichenzaehler %}<p class="field-counter" aria-live="polite"><span data-count>0</span> Zeichen</p>{% endif %}
+        {% elsif f.typ == 'zahl' %}
+        <input id="{{ fid }}" name="entry.{{ f.id }}" type="number" inputmode="numeric" min="1" max="99" class="input-short"{% if f.pflicht %} required{% endif %}{% if f.hinweis %} aria-describedby="{{ fid }}-hinweis"{% endif %}>
+        {% else %}
+        <input id="{{ fid }}" name="entry.{{ f.id }}" type="text" maxlength="200" autocomplete="off"{% if f.pflicht %} required{% endif %}{% if f.hinweis %} aria-describedby="{{ fid }}-hinweis"{% endif %}>
+        {% endif %}
+        {% endif %}
+        <p class="field-error" data-error hidden></p>
+      </div>
+      {% endfor %}
+
+      <!-- Falle für Spam-Bots: für Menschen unsichtbar -->
+      <div class="hp" aria-hidden="true">
+        <label for="website">Bitte leer lassen</label>
+        <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+      </div>
+
+      <p class="form-privacy">Deine Antworten werden über Google Forms an die Clubleitung der Moon Vampires Division übermittelt und nur für deine Bewerbung verwendet.</p>
+
+      <div class="form-actions">
+        <button type="submit" class="btn" data-submit>Bewerbung absenden</button>
+        <p class="form-status" role="status" aria-live="polite" data-status></p>
+      </div>
+    </form>
+
+    <div class="card form-success" id="bewerbung-gesendet" tabindex="-1" hidden>
+      <span class="eyebrow">Gesendet</span>
+      <h2>Danke für deine Bewerbung!</h2>
+      <p>Wir geben uns Mühe, dir zeitnah zu antworten – meistens per Discord. Wenn du innerhalb einer Woche nichts von uns hörst, hat es dieses Mal leider nicht gepasst.</p>
+      <div class="actions">
+        <a class="btn btn-ghost" href="{{ '/' | relative_url }}">Zur Startseite</a>
+      </div>
+    </div>
+
+    <p class="form-fallback reveal">Probleme mit dem Formular? Du kannst dich auch direkt über <a href="{{ site.bewerbung_google }}" target="_blank" rel="noopener">Google Forms</a> bewerben.</p>
+  </div>
+</section>

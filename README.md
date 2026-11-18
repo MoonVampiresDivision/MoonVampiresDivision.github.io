@@ -13,6 +13,9 @@ Jede Änderung, die du hier speicherst, ist nach etwa einer Minute online.
 | `clubtreffen.html` | Stammplatz, Roadmap |
 | `rangsystem.html` | Einleitung zum Rangsystem |
 | `bewirb-dich.html` | Voraussetzungen und Ablauf der Bewerbung |
+| `bewerbung.html` | Eigenes Bewerbungsformular (sendet an das Google-Formular) |
+| `_data/bewerbungsformular.yml` | **Fragen** des Bewerbungsformulars |
+| `_discord/` | Anleitung und Skript, mit denen Bewerbungen automatisch in Discord landen (wird nicht veröffentlicht) |
 | `_data/wochenplan.yml` | **Wochenplan** (Termine auf „Clubtreffen“) |
 | `_data/raenge.yml` | **Ränge** (Liste auf „Rangsystem“) |
 | `_data/navigation.yml` | Menüpunkte |
@@ -31,5 +34,8 @@ Die Einrückung (Leerzeichen am Zeilenanfang) muss gleich bleiben.
 
 **Ein Bild tauschen:** In `assets/img/` eine neue Datei mit **genau demselben Namen** hochladen
 („Add file“ → „Upload files“).
+
+**Bewerbungsformular testen, ohne etwas zu senden:** `/bewerbung.html?test` aufrufen.
+Dann zeigt das Formular nur an, was es senden würde.
 
 **Neues Teammitglied:** In `ueber-uns.html` einen `<article class="card member reveal">…</article>`-Block kopieren.

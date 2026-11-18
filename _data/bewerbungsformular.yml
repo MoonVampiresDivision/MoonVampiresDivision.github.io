@@ -1,0 +1,72 @@
+# Fragen des Bewerbungsformulars auf /bewerbung.html
+#
+# Die Antworten landen im Google-Formular der Clubleitung.
+# "id" ist die Nummer der Frage im Google-Formular (entry.<id>).
+# Wird im Google-Formular eine Frage NEU angelegt, bekommt sie eine neue Nummer –
+# dann muss sie hier angepasst werden. Reine Textänderungen an der Frage sind egal.
+#
+# typ:       text | zahl | absatz | auswahl
+# pflicht:   true = muss ausgefüllt werden
+# sonstiges: true = zusätzliche Option "Sonstiges" mit eigenem Textfeld
+
+- id: 698113676
+  typ: text
+  frage: Wie lautet dein Discord-Name?
+  hinweis: Damit wir dich kontaktieren können.
+  pflicht: true
+
+- id: 1884265043
+  typ: text
+  frage: Wie ist dein SSO-Name?
+  pflicht: true
+
+- id: 729773919
+  typ: text
+  frage: Wie dürfen wir dich nennen?
+  hinweis: Zum Beispiel dein Spitzname.
+  pflicht: true
+
+- id: 1005816283
+  typ: zahl
+  frage: Wie alt bist du?
+  hinweis: Trau dich auch, wenn du das Mindestalter nicht erreicht hast. Wir machen Ausnahmen, wenn wir merken, dass du zu uns passt!
+  pflicht: true
+
+- id: 747091318
+  typ: auswahl
+  frage: Welches Level hast du momentan?
+  pflicht: true
+  sonstiges: true
+  optionen:
+    - "20 - 21"
+    - "22 - 23"
+    - "24 - 25"
+    - "26+"
+
+- id: 275979870
+  typ: auswahl
+  frage: Kannst du in der Regel zu mindestens zwei Clubtreffen in der Woche?
+  pflicht: true
+  sonstiges: true
+  optionen:
+    - Ich kann in der Regel immer
+    - Ich schaffe die zwei Clubtreffen auf jeden Fall
+    - Manchmal ist die Zeit etwas enger aber ich gebe mir Mühe
+
+- id: 1449836563
+  typ: absatz
+  frage: Warst du schon in einem Club vor uns? Wenn ja, warum hast du diesen verlassen?
+  pflicht: true
+
+- id: 835464759
+  typ: absatz
+  frage: Warum genau möchtest du Mitglied der Moon Vampires Division werden?
+  hinweis: Kleiner Tipp … zwei Sätze reichen nicht! Überzeuge uns!
+  pflicht: true
+  zeichenzaehler: true
+
+- id: 1220327260
+  typ: absatz
+  frage: Wie bist du auf uns aufmerksam geworden?
+  hinweis: Es würde uns sehr helfen, wenn du uns mitteilst, wie du uns gefunden hast.
+  pflicht: false

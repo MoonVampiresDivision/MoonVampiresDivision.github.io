@@ -13,7 +13,10 @@ baseurl: ""
 # Links
 instagram: https://www.instagram.com/moon.vampires.division/
 instagram_name: "@moon.vampires.division"
-bewerbung: https://docs.google.com/forms/d/e/1FAIpQLSe1VFn8sNr0fqXc9M6VGDhzibzYSbAlL79_PRi8R5dRPi4vCg/viewform
+# Bewerbung: Das eigene Formular (bewerbung.html) sendet an "bewerbung_ziel".
+# "bewerbung_google" ist der Ausweich-Link, falls etwas nicht klappt.
+bewerbung_ziel: https://docs.google.com/forms/d/e/1FAIpQLSe1VFn8sNr0fqXc9M6VGDhzibzYSbAlL79_PRi8R5dRPi4vCg/formResponse
+bewerbung_google: https://docs.google.com/forms/d/e/1FAIpQLSe1VFn8sNr0fqXc9M6VGDhzibzYSbAlL79_PRi8R5dRPi4vCg/viewform
 
 exclude:
   - README.md
