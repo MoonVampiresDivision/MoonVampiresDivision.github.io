@@ -16,12 +16,20 @@ baseurl: ""
 bewerbung_ziel: https://docs.google.com/forms/d/e/1FAIpQLSe1VFn8sNr0fqXc9M6VGDhzibzYSbAlL79_PRi8R5dRPi4vCg/formResponse
 bewerbung_google: https://docs.google.com/forms/d/e/1FAIpQLSe1VFn8sNr0fqXc9M6VGDhzibzYSbAlL79_PRi8R5dRPi4vCg/viewform
 
-# Bestätigungscode der Google Search Console (nur der Wert, ohne "google-site-verification=")
-google_site_verification: WQRCSCATK1F7MyVlQgYKtr0rWcb8ZflhcWBVQvn20ms
+# Google Search Console: bestätigt über die Datei googlea0a8de82222a718d.html im Hauptordner
+# (bitte nicht löschen). Optional ginge auch ein HTML-Tag-Code hier (nur der Wert):
+google_site_verification: ""
 
 # Erstellt automatisch /sitemap.xml (Liste aller Seiten für Suchmaschinen)
 plugins:
   - jekyll-sitemap
+
+# Google-Bestätigungsdatei nicht in der Sitemap aufführen
+defaults:
+  - scope:
+      path: googlea0a8de82222a718d.html
+    values:
+      sitemap: false
 
 exclude:
   - README.md
