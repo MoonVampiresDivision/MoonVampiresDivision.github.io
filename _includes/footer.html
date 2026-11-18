@@ -1,14 +1,28 @@
 <footer class="site-footer">
   <div class="container footer-inner">
     <p class="footer-lead">Ihr findet uns außerdem hier:</p>
-    <a class="social-link" href="{{ site.instagram }}" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8">
-        <rect x="3" y="3" width="18" height="18" rx="5"/>
-        <circle cx="12" cy="12" r="4.2"/>
-        <circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/>
-      </svg>
-      <span>Instagram <span class="social-handle">{{ site.instagram_name }}</span></span>
-    </a>
+    <ul class="social-list">
+      {% for s in site.data.social %}
+      <li>
+        <a class="social-link" href="{{ s.url }}" target="_blank" rel="noopener" aria-label="{{ s.name }} {{ s.handle }} (öffnet in neuem Tab)">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            {% if s.icon == 'instagram' %}
+            <rect x="3" y="3" width="18" height="18" rx="5"/>
+            <circle cx="12" cy="12" r="4.2"/>
+            <circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/>
+            {% elsif s.icon == 'youtube' %}
+            <rect x="2.5" y="5" width="19" height="14" rx="4"/>
+            <path d="M10 9.2v5.6l4.8-2.8z" fill="currentColor"/>
+            {% elsif s.icon == 'tiktok' %}
+            <path d="M13.5 3.5v11a3.5 3.5 0 1 1-3.5-3.5"/>
+            <path d="M13.5 3.5c.4 2.6 2.4 4.4 5 4.6"/>
+            {% endif %}
+          </svg>
+          <span>{{ s.name }} <span class="social-handle">{{ s.handle }}</span></span>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
     <p class="copyright">© {{ site.time | date: '%Y' }} {{ site.title }}. Alle Inhalte der Homepage gehören Moon Vampires Division! Kopieren ist nicht erlaubt!</p>
   </div>
 </footer>

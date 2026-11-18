@@ -10,9 +10,7 @@ lang: de
 url: "https://moonvampiresdivision.github.io"
 baseurl: ""
 
-# Links
-instagram: https://www.instagram.com/moon.vampires.division/
-instagram_name: "@moon.vampires.division"
+# Links (Social Media stehen in _data/social.yml)
 # Bewerbung: Das eigene Formular (bewerbung.html) sendet an "bewerbung_ziel".
 # "bewerbung_google" ist der Ausweich-Link, falls etwas nicht klappt.
 bewerbung_ziel: https://docs.google.com/forms/d/e/1FAIpQLSe1VFn8sNr0fqXc9M6VGDhzibzYSbAlL79_PRi8R5dRPi4vCg/formResponse

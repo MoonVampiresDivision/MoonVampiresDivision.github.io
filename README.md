@@ -19,7 +19,8 @@ Jede Änderung, die du hier speicherst, ist nach etwa einer Minute online.
 | `_data/wochenplan.yml` | **Wochenplan** (Termine auf „Clubtreffen“) |
 | `_data/raenge.yml` | **Ränge** (Liste auf „Rangsystem“) |
 | `_data/navigation.yml` | Menüpunkte |
-| `_config.yml` | Seitentitel, Instagram-Link, Link zum Bewerbungsformular |
+| `_data/social.yml` | Social-Media-Links (Instagram, YouTube, TikTok) im Fußbereich |
+| `_config.yml` | Seitentitel, Link zum Bewerbungsformular |
 | `assets/img/` | Bilder |
 | `assets/css/style.css` | Design (Farben stehen ganz oben) |
 

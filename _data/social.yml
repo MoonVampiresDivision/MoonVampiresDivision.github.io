@@ -1,0 +1,16 @@
+# Social-Media-Links im Fußbereich jeder Seite.
+# icon: instagram | youtube | tiktok
+- name: Instagram
+  icon: instagram
+  url: https://www.instagram.com/moon.vampires.division/
+  handle: "@moon.vampires.division"
+
+- name: YouTube
+  icon: youtube
+  url: https://www.youtube.com/@moonvampiresdivision
+  handle: "@moonvampiresdivision"
+
+- name: TikTok
+  icon: tiktok
+  url: https://www.tiktok.com/@moon.vampires.division
+  handle: "@moon.vampires.division"
